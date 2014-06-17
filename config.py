@@ -169,4 +169,6 @@ config = {
 "NETWORK_DELETE_FLAG" : "0" ,
 "DISK_DEL_FLAG" : "0" ,
 
+#DOCKER FLAGS
+"VM_DOCKER_CREATE_FLAG" : "0"
 }

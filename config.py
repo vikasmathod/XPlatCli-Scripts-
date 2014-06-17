@@ -25,6 +25,7 @@ config = {
 "VM_SIZE_NAME" : "XplatTestVMSize",
 "VM_COMM_NAME" : "XplatTestComm",
 "VM_SSH_NAME" : "XplatTestSsh",
+"VM_DOCKER_NAME" : "XplatDockerVM",
 "VM_CUSTOMDATA_NAME" : "XplatCustomdata",
 "LOGINUSER" : "LOGINUSER",
 "LOGINPASSWORD" : "LOGINPASSWORD",
@@ -33,6 +34,7 @@ config = {
 "WIN_IMAGE_NAME" :"Some Windows Image Name", #diskname is obtained from vm image list and choose the one with windows
 "VM_VNET_IMAGE_NAME" :"XplatTestImage",
 "VM_COMM_IMAGE_NAME" :"Some community image name", #browse http://vmdepot.msopentech.com/ select a vm anc click on deployment button
+"VM_DOCKER_IMG_NAME" : "DockerUbuntuImg",
 
 "USER_NAME" :"XplatTestUser",
 "PASSWORD" :"Pa$$word@123" ,

@@ -234,6 +234,9 @@ if __name__ == "__main__":
 		metalog = "************** Azure Affinity Group Delete ******************* \t"
 		execute_command("azure account affinity-group delete "+config['AFFINITY_GRP_NAME'] + " --quiet",logfile,metalog)
 		
+		metalog = "************** Azure VM Docker Create ******************* \t"
+		execute_command("azure vm create " + config['XplatDockerVM'] + " " + config['VM_DOCKER_IMG_NAME']  + " " + " testuser "+ " " + config['PASSWORD'] + " " + "--ssh-cert "+config['CERT_FILE'] + " -e 22 -l "+config['LOCATION'],logfile,metalog)
+				
 		metalog = "************** Azure Account Clear ******************* \t"
 		execute_command("azure account clear --quiet",logfile,metalog)
 	if(config['GLOBAL_FLAG'] == "0"):
@@ -389,6 +392,9 @@ if __name__ == "__main__":
 		execute_command_with_flag("azure vm disk delete "+config['VM_DISK_IMAGE_NAME'],logfile,config['DISK_DEL_FLAG'],metalog)
 		metalog = "************** Azure VM Affinity Group Delete ******************* \t"
 		execute_command_with_flag("azure account affinity-group delete "+config['AFFINITY_GRP_NAME'] + " --quiet ",logfile,config['VM_AFFINITY_DEL_FLAG'],metalog)
+		
+		metalog = "************** Azure VM Docker Create ******************* \t"
+		execute_command("azure vm create " + config['XplatDockerVM'] + " " + config['VM_DOCKER_IMG_NAME']  + " " + " testuser "+ " " + config['PASSWORD'] + " " + "--ssh-cert "+config['CERT_FILE'] + " -e 22 -l "+config['LOCATION'],logfile,metalog)
 		
 		metalog = "************** Azure Account Clear ******************* \t"
 		execute_command_with_flag("azure account clear --quiet",logfile,config['ACCOUNT_CLEAR_FLAG'],metalog)
